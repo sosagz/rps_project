@@ -27,7 +27,7 @@ function playGame() {
         ) {
             console.log(`Human Wins, with ${humanChoice} beating ${computerChoice}`);
             humanScore++;
-            console.log(`Computer score: ${humanScore}`)
+            console.log(`Human score: ${humanScore}`)
         } 
         else if (
             computerChoice === 'rock' && humanChoice === 'scissors' ||
@@ -44,11 +44,10 @@ function playGame() {
     }
 
     for (let i = 0; i < 5; i++) {
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
         playRound(humanSelection, computerSelection);
     }
 }
-
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
 playGame();
